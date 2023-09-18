@@ -34,7 +34,7 @@ PIP_SOURCE = "https://mirror.baidu.com/pypi/simple"
 # The path that flagperf deploy in the cluster.
 # Users must set FLAGPERF_PATH to where flagperf deploy
 # You can assume the preset "/home/FlagPerf/training" points to Null
-FLAGPERF_PATH = "/home/FlagPerf/training"
+FLAGPERF_PATH = "/mnt/airs-business/paddle/FlagPerf/training"
 # Set log path on the host here.
 FLAGPERF_LOG_PATH = FLAGPERF_PATH + "/result/"
 
@@ -43,7 +43,7 @@ FLAGPERF_LOG_LEVEL = 'debug'
 
 # System config
 # Share memory size
-SHM_SIZE = "32G"
+SHM_SIZE = "256G"
 # Clear cache config. Clean system cache before running testcase.
 CLEAR_CACHES = True
 
@@ -53,9 +53,9 @@ CLEAR_CACHES = True
     "model:framework:hardwareID:nnodes:nproc:repeat": "dataset path"}
 '''
 CASES = {
-    "bert:pytorch_1.8:A100:1:8:1": "/raid/home_datasets_ckpt/bert/train/",
-    "glm:pytorch_1.8:A100:1:8:1": "/raid/home_datasets_ckpt/glm/train/",
-    "cpm:pytorch_1.8:A100:1:8:1": "/raid/home_datasets_ckpt/cpm/train/",
+    # "bert:pytorch_1.8:A100:1:8:1": "/raid/home_datasets_ckpt/bert/train/",
+    # "glm:pytorch_1.8:A100:1:8:1": "/raid/home_datasets_ckpt/glm/train/",
+    # "cpm:pytorch_1.8:A100:1:8:1": "/raid/home_datasets_ckpt/cpm/train/",
 
     # "mobilenetv2:pytorch_1.8:A100:1:8:1": "/raid/dataset/ImageNet_1k_2012/",
     # "vit:pytorch_1.13:A100:1:8:1": "/raid/dataset/ImageNet_1k_2012/",
@@ -77,4 +77,14 @@ CASES = {
     # "swin_transformer:pytorch_1.8:A100:1:8:1": "/raid/dataset/ImageNet_1k_2012/",
     # "t5_small:pytorch_1.8:A100:1:8:1": "/home/datasets_ckpt/t5_small_train",
     # "gpt2:pytorch_1.12:A100:1:8:1": "/raid/dataset/gpt2",
+    
+    
+    "gpt3-6.7b:paddle_2.5.1:TP1PP1SH2DE8A100:1:8:1": "/mnt/airs-business/paddle/gpt-data",
+    "gpt3-6.7b:paddle_2.5.1:TP2PP1SH2DE4A100:1:8:1": "/mnt/airs-business/paddle/gpt-data",
+    "gpt3-6.7b:paddle_2.5.1:TP2PP4SHNDENA100:1:8:1": "/mnt/airs-business/paddle/gpt-data",
+    
+    "gpt3-6.7b:paddle_2.5.1:TP1PP1SH2DE8A100:1:8:1": "/mnt/airs-business/paddle/gpt-data",
+    "gpt3-6.7b:paddle_2.5.1:TP2PP1SH2DE4A100:1:8:1": "/mnt/airs-business/paddle/gpt-data",
+    "gpt3-6.7b:paddle_2.5.1:TP2PP4SHNDENA100:1:8:1": "/mnt/airs-business/paddle/gpt-data",
+    
 }

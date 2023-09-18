@@ -18,7 +18,7 @@ from utils import cluster_manager
 from utils import flagperf_logger
 from utils import image_manager
 
-VERSION = "v0.1"
+VERSION = "v0.1_test_paddle"
 RUN_LOGGER = flagperf_logger.FlagPerfLogger()
 CLUSTER_MGR = cluster_manager.ClusterManager()
 

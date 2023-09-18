@@ -17,19 +17,20 @@ weight_decay = 0.01
 warmup_ratio = 0.01
 max_grad_norm = 1.0
 target_loss = 1.0
-target_acc = 0.6
-logging_steps = 20
-log_freq = 20
+target_ppl = 0.6
+logging_steps = 1
+log_freq = 1
 seed = 42
 
 # for parallel
 per_device_train_batch_size = 1
 per_device_eval_batch_size = 1
-tensor_parallel_degree = 1
-pipeline_parallel_degree = 1
-use_flash_attention = 0
+tensor_parallel_degree = 2
+pipeline_parallel_degree = 4
+use_flash_attention = 1
 fuse_attention_qkv = 0
-fp16 = False
+use_fused_rms_norm = 1
+fp16 = True
 fp16_opt_level = "O2"
 sharding = ""
 recompute = False
