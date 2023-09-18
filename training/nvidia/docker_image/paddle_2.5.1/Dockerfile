@@ -4,3 +4,5 @@ RUN pip3 uninstall -y pylint
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN pip3 install --upgrade typing-extensions
 RUN pip3 install paddlenlp==2.6.1
+RUN git clone https://github.com/PaddlePaddle/PaddleNLP.git
+RUN cd PaddleNLP/model_zoo/gpt-3/external_ops && python setup.py install
