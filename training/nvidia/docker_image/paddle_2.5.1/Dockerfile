@@ -3,4 +3,4 @@ RUN /bin/bash -c "uname -a"
 RUN pip3 uninstall -y pylint
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 RUN pip3 install --upgrade typing-extensions
-RUN pip3 install --pre --upgrade paddlenlp -f https://www.paddlepaddle.org.cn/whl/paddlenlp.html
+RUN pip3 install paddlenlp==2.6.1
